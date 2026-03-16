@@ -77,18 +77,23 @@ const Header = () => {
 
       {/* Mobile Menu Overlay & Drawer */}
       <div 
-        className={`fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`}
+        className={`fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[60] transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div 
-          className={`fixed inset-y-0 left-0 w-[80%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+          className={`fixed inset-y-0 left-0 w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-out transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col h-full">
             {/* Header du drawer */}
-            <div className="p-6 border-b border-slate-100 flex items-center justify-between">
-              <BBSLogo className="scale-75 origin-left" />
-              <button onClick={() => setIsMenuOpen(false)} className="p-2 text-slate-400 hover:text-slate-900">
+            <div className="p-6 border-b border-slate-100 flex items-center justify-between gap-4">
+              <div className="overflow-hidden">
+                <BBSLogo className="scale-75 origin-left" />
+              </div>
+              <button 
+                onClick={() => setIsMenuOpen(false)} 
+                className="p-2 text-slate-400 hover:text-slate-900 bg-slate-50 rounded-full shrink-0"
+              >
                 <X size={24} />
               </button>
             </div>
