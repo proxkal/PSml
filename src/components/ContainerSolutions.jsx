@@ -75,29 +75,29 @@ const ContainerSolutions = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="group relative bg-[#0a0a0a] border border-[#1a1a1a] p-0 hover:border-[#007A7A]/50 transition-all duration-300 flex overflow-hidden min-h-[280px]"
+              className="group relative bg-[#0a0a0a] border border-[#1a1a1a] p-0 hover:border-[#007A7A]/50 transition-all duration-300 flex flex-col sm:flex-row overflow-hidden min-h-[380px] sm:min-h-[280px]"
             >
               
               {/* Côté Gauche : Données Techniques */}
-              <div className="flex-1 p-8 flex flex-col justify-between relative z-10 bg-[#0a0a0a]">
+              <div className="flex-1 p-6 md:p-8 flex flex-col justify-between relative z-10 bg-[#0a0a0a]">
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-black uppercase italic leading-tight mb-4 group-hover:text-[#007A7A] transition-colors tracking-tight">
+                  <h3 className="text-xl md:text-3xl font-black uppercase italic leading-tight mb-4 group-hover:text-[#007A7A] transition-colors tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-slate-300 text-sm md:text-base leading-relaxed font-bold uppercase tracking-tight opacity-90">
+                  <p className="text-slate-300 text-xs md:text-base leading-relaxed font-bold uppercase tracking-tight opacity-90">
                     {service.desc}
                   </p>
                 </div>
               </div>
 
-              {/* Côté Droit : Aperçu Visuel vertical */}
-              <div className="w-24 md:w-32 border-l border-[#1a1a1a] relative overflow-hidden group-hover:w-64 transition-all duration-700 ease-in-out shrink-0">
+              {/* Côté Droit (ou haut sur mobile) : Aperçu Visuel */}
+              <div className="h-48 sm:h-auto sm:w-32 border-t sm:border-t-0 sm:border-l border-[#1a1a1a] relative overflow-hidden sm:group-hover:w-64 transition-all duration-700 ease-in-out shrink-0 sm:order-last -order-first">
                 <img 
                   src={service.image} 
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
+                  className="absolute inset-0 w-full h-full object-cover grayscale-0 sm:grayscale sm:group-hover:grayscale-0 sm:group-hover:scale-110 transition-all duration-700" 
                   alt={service.title} 
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#050505]/60 group-hover:to-transparent transition-all"></div>
+                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-l from-transparent to-[#050505]/60 sm:group-hover:to-transparent transition-all"></div>
               </div>
 
               {/* Ligne latérale d'accentuation BBS Green */}

@@ -24,7 +24,7 @@ const Features = () => (
             <Clock className="h-10 w-10 text-[#007A7A]" />
           </div>
           <h4 className="text-base font-black text-[#007A7A] uppercase tracking-widest mb-2">Disponibilité</h4>
-          <span className="font-bold text-gray-900 uppercase tracking-tighter leading-tight text-sm md:text-base whitespace-nowrap">
+          <span className="font-bold text-gray-900 uppercase tracking-tighter leading-tight text-sm md:text-base">
             Réactivité Opérationnelle Continue
           </span>
         </div>
