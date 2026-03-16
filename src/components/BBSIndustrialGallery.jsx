@@ -102,7 +102,7 @@ const BBSIndustrialGallery = () => {
               className="relative bg-[#111827] rounded-lg overflow-hidden group border border-slate-800 hover:border-[#007A7A]/50 transition-all duration-300 shadow-xl"
             >
               {/* Image avec effet de mise en avant au survol */}
-              <div className="w-full h-64 overflow-hidden">
+              <div className="w-full h-48 sm:h-64 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
