@@ -83,7 +83,7 @@ const ContentWithImage = ({ imageLeft = false, title, description, items, image 
                         ))}
                     </ul>
                 </div>
-                <div className="md:w-1/2 relative group">
+                <div className="md:w-1/2 relative group hidden md:block">
                     <div className="absolute -inset-4 bg-[#007A7A]/10 rounded-xl transform rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
                     <div className="relative h-96 w-full rounded-lg overflow-hidden border-4 border-white shadow-2xl">
                         <img 

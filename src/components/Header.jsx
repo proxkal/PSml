@@ -75,37 +75,62 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6">
-          {navLinks.map((link) => (
-            link.isAnchor ? (
-              <a 
-                key={link.name} 
-                href={link.path} 
+      {/* Mobile Menu Overlay & Drawer */}
+      <div 
+        className={`fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`}
+        onClick={() => setIsMenuOpen(false)}
+      >
+        <div 
+          className={`fixed inset-y-0 left-0 w-[80%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col h-full">
+            {/* Header du drawer */}
+            <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+              <BBSLogo className="scale-75 origin-left" />
+              <button onClick={() => setIsMenuOpen(false)} className="p-2 text-slate-400 hover:text-slate-900">
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Liens de navigation */}
+            <nav className="flex-1 px-6 py-8 flex flex-col space-y-6">
+              {navLinks.map((link) => (
+                link.isAnchor ? (
+                  <a 
+                    key={link.name} 
+                    href={link.path} 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-4 h-1 bg-[#007A7A] mr-0 group-hover:mr-3 transition-all duration-300"></span>
+                    {link.name}
+                  </a>
+                ) : (
+                  <NavLink 
+                    key={link.name} 
+                    to={link.path} 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-4 h-1 bg-[#007A7A] mr-0 group-hover:mr-3 transition-all duration-300"></span>
+                    {link.name}
+                  </NavLink>
+                )
+              ))}
+            </nav>
+
+            {/* Footer du drawer */}
+            <div className="p-6 border-t border-slate-100">
+              <Link
+                to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors"
+                className="w-full block text-center bg-[#007A7A] text-white font-black py-4 rounded-lg shadow-lg uppercase tracking-widest text-sm"
               >
-                {link.name}
-              </a>
-            ) : (
-              <NavLink 
-                key={link.name} 
-                to={link.path} 
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-black uppercase italic tracking-tighter text-slate-900 hover:text-[#007A7A] transition-colors"
-              >
-                {link.name}
-              </NavLink>
-            )
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setIsMenuOpen(false)}
-            className="w-full text-center bg-[#007A7A] text-white font-black py-4 rounded-lg shadow-xl uppercase tracking-widest"
-          >
-            Contactez-nous
-          </Link>
+                Contactez-nous
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>
