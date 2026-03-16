@@ -33,7 +33,7 @@ const galleryItems = [
   },
   {
     id: '05',
-    title: 'Aménagement Conteneur Bleu',
+    title: 'Aménagement Conteneur',
     description: 'Transformation complète de conteneur maritime en espace de travail fonctionnel.',
     icon: <Package className="w-6 h-6 text-[#007A7A]" />,
     image: '/assets/bbscontainer/container bleu.jpg'

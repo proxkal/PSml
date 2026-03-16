@@ -25,7 +25,7 @@ const projectGallery = [
   },
   {
     fileName: 'container bleu.jpg',
-    title: 'Container Bleu - Aménagement Extérieur',
+    title: 'Aménagement Conteneur - Extérieur',
     description: 'Exemple de conteneur aménagé avec finition extérieure dédiée aux environnements industriels.',
   },
   {
