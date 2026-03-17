@@ -44,6 +44,9 @@ const SEO = ({ page = 'home' }) => {
     'Bouyedi Business Services',
     'BBS Gabon',
     'Port-Gentil',
+    'manutention industrielle Gabon',
+    'cimentation et sablage Port-Gentil',
+    'peinture bâtiment et industrielle Gabon',
     'logistique industrielle Gabon',
     'conteneurs aménagés Port-Gentil',
     'génie civil Gabon',
@@ -53,8 +56,6 @@ const SEO = ({ page = 'home' }) => {
     'BTP Gabon',
     'location conteneur Gabon',
     'aménagement bureaux conteneurs',
-    'BOUYEDI Port-Gentil',
-    'BBS Services Pétroliers',
   ].join(', ');
 
   const organizationSchema = {
@@ -92,7 +93,15 @@ const SEO = ({ page = 'home' }) => {
       '@type': 'Country',
       name: 'Gabon',
     },
-    serviceType: ['Logistique modulaire', 'Genie civil', 'Maintenance industrielle', 'Support RH technique'],
+    serviceType: [
+      'Logistique modulaire', 
+      'Genie civil', 
+      'Maintenance industrielle', 
+      'Manutention et Levage',
+      'Cimentation et Sablage',
+      'Peinture industrielle',
+      'Support RH technique'
+    ],
   };
 
   return (
