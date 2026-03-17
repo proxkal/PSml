@@ -50,8 +50,8 @@ const projectGallery = [
   },
   {
     fileName: 'container bleu.jpg',
-    title: 'Aménagement Conteneur - Extérieur',
-    description: 'Exemple de conteneur aménagé avec finition extérieure dédiée aux environnements industriels.',
+    title: 'Location et vente de conteneur',
+    description: 'BBS recherche les meilleures offres du marché pour vous fournir des conteneurs adaptés à vos besoins (20 pieds, 40 pieds, conteneurs ISO, etc.).',
   },
   {
     fileName: 'equipe bbs.jpeg',
