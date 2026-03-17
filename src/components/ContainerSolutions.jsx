@@ -49,55 +49,68 @@ const containerServices = [
 
 const ContainerSolutions = () => {
   return (
-    <section id="services" className="bg-[#050505] py-24 text-white border-y border-[#1a1a1a] relative overflow-hidden">
+    <section id="services" className="bg-[#050505] py-16 text-white border-y border-[#1a1a1a] relative overflow-hidden">
       {/* Grille de fond millimétrée très sombre */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#007A7A 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
-        {/* En-tête simplifié */}
-        <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 border-b border-slate-800 pb-10">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic text-white">
+        {/* En-tête compact */}
+        <div className="flex flex-col md:flex-row justify-between items-baseline mb-10 border-b border-slate-800 pb-6">
+          <div className="space-y-2">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase italic text-white">
               Nos Services
             </h2>
-            <p className="text-xl font-bold tracking-tight text-[#007A7A] uppercase">
+            <p className="text-sm md:text-base font-bold tracking-tight text-[#007A7A] uppercase">
               Ingénierie, Logistique & Solutions Conteneurs
             </p>
           </div>
         </div>
 
-        {/* Matrice de Services */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+        {/* Matrice de Services Compacte */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {containerServices.map((service, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="group relative bg-[#0a0a0a] border border-[#1a1a1a] p-0 hover:border-[#007A7A]/50 transition-all duration-300 flex overflow-hidden min-h-[160px] sm:min-h-[280px]"
+              viewport={{ once: true }}
+              className="group relative bg-[#0a0a0a] border border-[#1a1a1a] p-0 hover:border-[#007A7A]/50 transition-all duration-300 flex flex-col overflow-hidden h-[320px]"
             >
               
-              {/* Côté Gauche : Données Techniques */}
-              <div className="flex-1 p-5 md:p-8 flex flex-col justify-center sm:justify-between relative z-10 bg-[#0a0a0a]">
-                <div>
-                  <h3 className="text-lg md:text-3xl font-black uppercase italic leading-tight mb-2 sm:mb-4 group-hover:text-[#007A7A] transition-colors tracking-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-300 text-[10px] sm:text-base leading-snug sm:leading-relaxed font-bold uppercase tracking-tight opacity-90 line-clamp-3 sm:line-clamp-none">
-                    {service.desc}
-                  </p>
+              {/* Partie Image (Hauteur fixe réduite) */}
+              <div className="h-40 relative overflow-hidden shrink-0">
+                <img 
+                  src={service.image} 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-700" 
+                  alt={service.title} 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+                
+                {/* Icône flottante */}
+                <div className="absolute bottom-4 left-4 p-2 bg-[#007A7A] text-white rounded shadow-lg group-hover:scale-110 transition-transform">
+                  {service.icon}
                 </div>
               </div>
 
-              {/* Côté Droit : Aperçu Visuel compact sur mobile */}
-              <div className="w-20 sm:w-32 border-l border-[#1a1a1a] relative overflow-hidden sm:group-hover:w-64 transition-all duration-700 ease-in-out shrink-0">
-                <img 
-                  src={service.image} 
-                  className="absolute inset-0 w-full h-full object-cover sm:group-hover:scale-110 transition-all duration-700" 
-                  alt={service.title} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#050505]/60 sm:group-hover:to-transparent transition-all"></div>
+              {/* Partie Texte (Contenu compact) */}
+              <div className="flex-1 p-5 flex flex-col justify-start relative z-10 bg-[#0a0a0a]">
+                <h3 className="text-lg font-black uppercase italic leading-tight mb-2 group-hover:text-[#007A7A] transition-colors tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="text-slate-400 text-xs leading-relaxed font-semibold uppercase tracking-tight line-clamp-3">
+                  {service.desc}
+                </p>
+                
+                {/* Tags discrets */}
+                <div className="mt-auto flex flex-wrap gap-2 pt-3">
+                  {service.tags.map(tag => (
+                    <span key={tag} className="text-[9px] font-black bg-slate-900 text-slate-500 px-2 py-0.5 rounded border border-slate-800 uppercase">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Ligne latérale d'accentuation BBS Green */}

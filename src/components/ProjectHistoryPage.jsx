@@ -4,6 +4,31 @@ import { motion } from 'framer-motion';
 
 const projectGallery = [
   {
+    fileName: 'Projet manutention cimentation sablage GOC/Projet GOC ctn SPIE - Manutention.jpg',
+    title: 'Projet GOC ctn SPIE - Manutention',
+    description: 'Opérations de manutention de conteneurs pour le projet GOC SPIE.',
+  },
+  {
+    fileName: 'Projet manutention cimentation sablage GOC/Projet manutention.jpg',
+    title: 'Projet manutention',
+    description: 'Déploiement des moyens de levage et manutention sur site industriel.',
+  },
+  {
+    fileName: 'Projet manutention cimentation sablage GOC/Projet Mud Lab M&P smp RIG 103.jpg',
+    title: 'Projet Mud Lab M&P smp RIG 103',
+    description: 'Installation et aménagement du Mud Lab pour Maurel & Prom sur le RIG 103.',
+  },
+  {
+    fileName: 'Projet manutention cimentation sablage GOC/Projet Perenco cimentation & sablage.jpg',
+    title: 'Projet Perenco cimentation & sablage',
+    description: 'Travaux techniques de cimentation et sablage pour les infrastructures Perenco.',
+  },
+  {
+    fileName: 'Projet manutention cimentation sablage GOC/Projet Sablage CTN Perenco cimentation.jpg',
+    title: 'Projet Sablage CTN Perenco cimentation',
+    description: 'Traitement de surface par sablage sur conteneurs de cimentation Perenco.',
+  },
+  {
     fileName: '39ea306e-5768-4125-b6c7-e6b033b29990.jpeg',
     title: 'Intervention Terrain - Équipe BBS',
     description: 'Vue opérationnelle d\'une équipe mobilisée sur site pour les travaux industriels.',
@@ -100,7 +125,10 @@ const projectGallery = [
   },
 ];
 
-const getImagePath = (fileName) => `/assets/bbscontainer/${encodeURIComponent(fileName)}`;
+const getImagePath = (fileName) => {
+  // Gère les sous-dossiers si présents dans fileName
+  return `/assets/bbscontainer/${fileName.split('/').map(encodeURIComponent).join('/')}`;
+};
 
 const ProjectHistoryPage = () => {
   return (
