@@ -44,7 +44,8 @@ const containerServices = [
 const ContainerSolutions = () => {
   return (
     <section id="services" className="bg-[#050505] py-20 text-white border-y border-[#1a1a1a] relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+      {/* Grille de fond : Désactivée sur mobile pour éviter le clignotement */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none hidden md:block" 
            style={{ backgroundImage: 'radial-gradient(#007A7A 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

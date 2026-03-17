@@ -106,11 +106,11 @@ const HomePage = ({ onLearnMoreClick }) => (
 
     <ContentWithImage
       imageLeft={true}
-      title="Expertise Industrielle & Solutions Modulaires"
-      description="BBS s'impose comme un partenaire stratégique au Gabon. Notre expertise couvre l'intégralité de la chaîne de valeur, de la fourniture de solutions modulaires sur mesure au support opérationnel industriel."
+      title="Expertise Industrielle & Conteneurs Aménagés"
+      description="BBS s'impose comme un partenaire stratégique au Gabon. Notre expertise couvre l'intégralité de la chaîne de valeur, de la fourniture de conteneurs aménagés sur mesure au support opérationnel industriel."
       items={[
         'Vente et Location de conteneurs neufs et d’occasion.',
-        'Aménagement et Customisation de conteneurs (Bureaux, Ateliers).',
+        'Aménagement de conteneurs (Bureaux, Ateliers, Unités de vie).',
         'Travaux techniques : Cimentation, Sablage et Peinture industrielle.',
         'Génie Civil et BTP industriel.',
         'Manutention, Levage et Logistique opérationnelle.',
