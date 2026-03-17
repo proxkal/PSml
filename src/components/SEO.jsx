@@ -10,7 +10,7 @@ const resolveBaseUrl = () => {
     return window.location.origin;
   }
 
-  return 'https://bbs-bouyedi-business-services.vercel.app';
+  return 'https://bouyediservices.com';
 };
 
 const BASE_URL = resolveBaseUrl();
