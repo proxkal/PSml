@@ -21,12 +21,17 @@ const Footer = () => {
         {/* Activités & Prestations */}
         <div>
           <h3 className="text-white font-bold mb-6 text-sm flex items-center">
-            <Briefcase className="w-4 h-4 mr-2 text-bbs-green" /> ACTIVITÉS PRESTATAIRE
+            <Briefcase className="w-4 h-4 mr-2 text-bbs-green" /> NOS SERVICES
           </h3>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Gestion & Placement de personnel</li>
-            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Construction tous corps d'État</li>
+          <ul className="grid grid-cols-1 gap-y-2 text-[11px] uppercase tracking-wider font-semibold">
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Manutention & Levage</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Sablage & Cimentation</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Peinture Bâtiment & Industriel</li>
             <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Location & Vente de containers</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Aménagement de containers</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Génie Civil & BTP</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Logistique Opérationnelle</li>
+            <li className="flex items-start"><span className="text-bbs-green mr-2">•</span> Recrutement Personnel Qualifié</li>
           </ul>
         </div>
 

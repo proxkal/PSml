@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const containerServices = [
   {
     title: "Vente & Location",
-    desc: "Leader au Gabon : Conteneurs maritimes et offshore neufs ou d'occasion. DNV 2.7-1 & ISO.",
+    desc: "Leader au Gabon : Conteneurs maritimes et offshore neufs ou d'occasion.",
     icon: <Container className="w-5 h-5" />,
     image: "/assets/bbscontainer/container bleu.jpg"
   },
