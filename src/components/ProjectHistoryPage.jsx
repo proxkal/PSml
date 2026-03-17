@@ -56,7 +56,7 @@ const projectGallery = [
   {
     fileName: 'equipe bbs.jpeg',
     title: 'Équipe BBS - Mobilisation',
-    description: 'Ressources humaines qualifiées mobilisées pour les opérations clients.',
+    description: 'Personnel qualifié mobilisé pour les opérations clients.',
   },
   {
     fileName: 'equipe test.jpeg',
