@@ -7,42 +7,36 @@ const containerServices = [
     title: "Vente & Location",
     desc: "Leader au Gabon : Conteneurs maritimes et offshore neufs ou d'occasion. DNV 2.7-1 & ISO.",
     icon: <Container className="w-5 h-5" />,
-    tags: ["DNV 2.7-1", "Standard ISO"],
     image: "/assets/bbscontainer/container bleu.jpg"
   },
   {
     title: "Aménagement & Customisation",
     desc: "Transformation sur mesure : Bureaux, ateliers, plomberie et électricité industrielle intégrée.",
     icon: <Hammer className="w-5 h-5" />,
-    tags: ["Bureaux", "Ateliers", "Vie de Base"],
     image: "/assets/bbscontainer/travaux-soudure-interne.jpg"
   },
   {
     title: "Manutention & Logistique",
     desc: "Opérations de levage et manutention sur sites pétroliers avec équipements certifiés.",
     icon: <Truck className="w-5 h-5" />,
-    tags: ["Levage", "Logistique"],
     image: "/assets/bbscontainer/Projet Manutention Cimentation Sablage GOC/Projet manutention.jpg"
   },
   {
     title: "Cimentation & Sablage",
     desc: "Expertise technique en traitement de surface et travaux de cimentation industrielle.",
     icon: <Pickaxe className="w-5 h-5" />,
-    tags: ["Sablage", "Cimentation"],
-    image: "/assets/bbscontainer/Projet Manutention Cimentation Sablage GOC/Projet Perenco cimentation & sablage.jpg"
+    image: "/assets/bbscontainer/Travaux génie civil.jpeg"
   },
   {
     title: "Peinture Bâtiment & Industriel",
     desc: "Finition et protection anticorrosion pour infrastructures industrielles et tertiaires.",
     icon: <Paintbrush className="w-5 h-5" />,
-    tags: ["Anticorrosion", "Finition"],
     image: "/assets/bbscontainer/travaux-peinture-externe.jpg"
   },
   {
     title: "Génie Civil & BTP",
     desc: "Réalisations d'envergure : Bancs de comptage GOC et infrastructures Assala Yendzi.",
     icon: <Anchor className="w-5 h-5" />,
-    tags: ["GOC", "Assala", "BTP"],
     image: "/assets/bbscontainer/Travaux génie civil site Mboumba GOC banc de comptage.jpeg"
   }
 ];
@@ -87,13 +81,6 @@ const ContainerSolutions = () => {
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed font-semibold uppercase tracking-tight line-clamp-3">
                   {service.desc}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {service.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-black bg-slate-900 text-[#007A7A] px-2 py-0.5 rounded border border-[#007A7A]/20 uppercase">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Image Verticale (Droite - Dynamique) */}
