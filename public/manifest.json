@@ -3,12 +3,12 @@
   "short_name": "BBS",
   "icons": [
     {
-      "src": "/favicon-circular.png",
+      "src": "/favicon-circular-bbs.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/favicon-circular.png",
+      "src": "/favicon-circular-bbs.png",
       "sizes": "512x512",
       "type": "image/png"
     },
