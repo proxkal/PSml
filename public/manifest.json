@@ -1,0 +1,25 @@
+{
+  "name": "BOUYEDI BUSINESS & SERVICES",
+  "short_name": "BBS",
+  "icons": [
+    {
+      "src": "/favicon-circular.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-circular.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-bbs-circular.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

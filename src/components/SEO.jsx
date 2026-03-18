@@ -23,21 +23,21 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/logo-bbs.png`;
 
 const pageMeta = {
   home: {
-    title: "BOUYEDI BUSINESS SERVICES - Solutions Industrielles Au Gabon",
+    title: "BOUYEDI BUSINESS & SERVICES Location & Aménagement Conteneur au Gabon",
     description:
-      "BOUYEDI BUSINESS SERVICES accompagne les acteurs pétroliers, gaziers et BTP au Gabon: conteneurs aménagés, maintenance industrielle, génie civil et support opérationnel.",
+      "BOUYEDI BUSINESS & SERVICES accompagne les acteurs pétroliers, gaziers et BTP au Gabon: conteneurs aménagés, maintenance industrielle, génie civil et support opérationnel.",
     canonical: BASE_URL,
   },
   contact: {
-    title: 'Contact - BOUYEDI BUSINESS SERVICES',
+    title: 'Contact - BOUYEDI BUSINESS & SERVICES',
     description:
-      'Contactez BOUYEDI BUSINESS SERVICES à Port-Gentil pour vos projets industriels: logistique modulaire, maintenance, génie civil et assistance technique.',
+      'Contactez BOUYEDI BUSINESS & SERVICES à Port-Gentil pour vos projets industriels: logistique modulaire, maintenance, génie civil et assistance technique.',
     canonical: `${BASE_URL}/contact`,
   },
   missions: {
-    title: 'Missions - BOUYEDI BUSINESS SERVICES',
+    title: 'Missions - BOUYEDI BUSINESS & SERVICES',
     description:
-      'Découvrez les missions et réalisations de BOUYEDI BUSINESS SERVICES : projets terrain, aménagement de conteneurs, maintenance et génie civil au Gabon.',
+      'Découvrez les missions et réalisations de BOUYEDI BUSINESS & SERVICES : projets terrain, aménagement de conteneurs, maintenance et génie civil au Gabon.',
     canonical: `${BASE_URL}/missions`,
   },
 };
@@ -66,10 +66,10 @@ const SEO = ({ page = 'home' }) => {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'BOUYEDI BUSINESS SERVICES',
+    name: 'BOUYEDI BUSINESS & SERVICES',
     alternateName: 'BBS',
     url: BASE_URL,
-    logo: `${BASE_URL}/logo-bbs.png`,
+    logo: `${BASE_URL}/logo-bbs-circular.svg`,
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -90,8 +90,8 @@ const SEO = ({ page = 'home' }) => {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'BOUYEDI BUSINESS SERVICES',
-    image: `${BASE_URL}/logo-bbs.png`,
+    name: 'BOUYEDI BUSINESS & SERVICES',
+    image: `${BASE_URL}/logo-bbs-circular.svg`,
     url: current.canonical,
     description: current.description,
     areaServed: {
