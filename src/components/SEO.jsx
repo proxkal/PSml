@@ -1,16 +1,21 @@
 import { Helmet } from 'react-helmet-async';
 
-const resolveBaseUrl = () => {
-  const envUrl = import.meta.env.VITE_SITE_URL;
-  if (envUrl && typeof envUrl === 'string') {
-    return envUrl.replace(/\/$/, '');
-  }
+const PRIMARY_SITE_URL = 'https://bouyediservices.com';
 
-  if (typeof window !== 'undefined' && window.location?.origin) {
+const resolveBaseUrl = () => {
+  // Always use the primary domain for canonicals in production to avoid indexing Vercel subdomains.
+  // This is critical for SEO when using a custom domain.
+  if (
+    typeof window !== 'undefined' &&
+    window.location?.origin &&
+    /localhost|127\.0\.0\.1/.test(window.location.hostname)
+  ) {
     return window.location.origin;
   }
 
-  return 'https://bouyediservices.com';
+  // Use PRIMARY_SITE_URL for all non-local environments.
+  // This ensures Google always sees the correct production domain.
+  return PRIMARY_SITE_URL;
 };
 
 const BASE_URL = resolveBaseUrl();
